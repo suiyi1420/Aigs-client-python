@@ -1,0 +1,160 @@
+body {
+            background-color: #f0f0f0;flex: 1;position: relative;
+        }
+
+        .isAuto{
+            background: url("../images/isAuto.png") left top no-repeat ;
+            background-size:contain ;
+            -moz-box-shadow: 0px 0px 15px #000000; /* 老的 Firefox */
+            box-shadow: 0px 0px 15px #000000;
+        }
+        .back {
+            padding: 2vw;
+            font-size: 8vw;
+            color: #616161;
+            background-color: #fff;
+        }
+
+        .switc {
+            padding: 2vw;
+            height: 15vw;
+            display: flex;
+            flex-direction: row;
+            margin-top: 3vw;
+            background-color: #fff;
+        }
+
+        .switc-text {
+            display: flex;
+            font-size: 5vw;
+            align-items: center;
+            flex: 1;
+            padding: 2vw;
+        }
+
+        .switc-box {
+            justify-content: flex-end;
+        }
+
+        #webcam{padding:0vw;height:75vw;}
+        /*#webcam img{height:75vw !important;width:100vw !important;}*/
+        .data-state {
+            margin-top: 3vw;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0vw 2.2vw;
+            position: relative;
+            margin-top: 3vw;
+        }
+        .title{height:10vw;background-color:#fff;align-items: center;font-size: 4vw;color:#000;display: flex;padding: 0 3vw;margin-top: 3vw;}
+
+        .data-state-item {
+            display: flex;
+            min-height: 28.3vw;
+            flex-direction: column;
+            align-items: center;
+            width: 28vw;
+            margin: 0 1.5vw 3vw 1.5vw;
+            background-color: #ffffff;
+            padding: 3vw 0;
+            position: relative;
+        }
+
+        .data-state-item1 {
+            height: 26vw;
+        }
+
+        .data-state-item-text {
+            font-size: 4vw;
+            position: absolute;
+            bottom: 3vw;
+            font-weight: bold;
+        }
+
+        .data-state-item-value {
+            font-size: 3vw;
+            position: absolute;
+            bottom: 9vw;
+            font-weight: bold;
+        }
+
+        .data-state-item-pic {
+            margin-bottom: 8vw;
+            margin-left: -10vw;
+        }
+
+        .data-state-item-right {
+            position: absolute;
+            right: 2vw;
+            top: 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .data-state-item-right-pic {
+        }
+
+        .data-state-item-right-text {
+            font-size: 5vw;
+            font-weight: bold;
+        }
+
+        .data-state-item-right-text2 {
+            font-size: 3vw;
+            font-weight: bold;
+        }
+
+        .data-state-item-right-text3 {
+            font-size: 4vw;
+            font-weight: bold;
+        }
+
+        .cold {
+            color: deepskyblue;
+        }
+
+
+        .red {
+            color: #cc0000;
+        }
+
+        .green2 {
+            color: rgb(0, 133, 0);
+        }
+
+        .yellow {
+            color: gold
+        }
+
+        .water {
+            color: dodgerblue
+        }
+
+        .orange {
+            color: #e84002
+        }
+
+        .olive {
+            color: #808000
+        }
+        .gray{color:#a8a9ad;}
+        .bg-connect{width:100vw;height:calc(100% - 15vw);z-index:1000;background-color:rgba(0,0,0,0.7);position:absolute;left:0;top:15vw;display: flex;justify-content: center;}
+        .bg-connect div{background:#fff;width:30vw;height:30vw;display: flex;justify-content: center;align-items: center;position: fixed;top:60vw;}
+        #cameraImg{width:100vw;height:75vw;display:none;}
+        .switc-reset{background-color: #cc0000;color: #fff;padding: 0vw;
+            align-content: center;justify-content: center;height: 34px;display: flex;font-size: 3vw;align-items: center;flex: 1;margin-right: 5px;    border-radius: 1vw;}
+        .switc-reset.disable{background-color:#ccc !important;}
+        .reshui{background-image:url("./images/reshui.png");background-repeat: no-repeat;background-position:center;width:10vw;height:10vw;background-size: contain;}
+        .reshui.active{background-image:url("./images/reshui_o.png") !important;}
+        .jiawen{background-image:url("./images/jiawen.png");background-repeat: no-repeat;background-position:center;width:10vw;height:10vw;background-size: contain;}
+        .jiawen.active{background-image:url("./images/jiawen_o.png") !important;}
+        .right{float:right;}
+        .left{float:left;}
+        .food_time_list_item_left{width:80%;height:100%;}
+        .food_time_list_item_delete{width:20%;height:100%;display: flex;justify-content: center;align-items: center;}
+        .food_time_list_item_left_week{width:80%;height:100%;display: flex;align-items: center;}
+        .food_time_list_item_left_time{width:20%;height:100%;display: flex;align-items: center;}
+        .food_time_list_item{overflow:hidden;margin:0 0 2vw 0;height:13vw;border-bottom: 1px dashed #000;}
+        .food_list_bg{background:rgba(0,0,0,0.7);position: absolute;width:100%;height:100%;top:15vw;left:0;display: flex;justify-content: center;align-items: center;}
+        .food_time_list{max-height:75vw;overflow: auto;}
