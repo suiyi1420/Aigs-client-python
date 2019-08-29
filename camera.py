@@ -15,7 +15,7 @@ import threading
 global socketIO
 global loop
 loop=1
-img_quality = 20#设置摄像头的质量，越高越流畅，但资源消耗越大，越容易出问题
+img_quality = 20#fps，设置摄像头的质量，越高越流畅，但资源消耗越大，越容易出问题。
 resolution = (320, 240)#设置图像分辨率
 def on_connect():
     print('connect')

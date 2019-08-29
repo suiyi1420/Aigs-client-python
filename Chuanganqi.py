@@ -12,22 +12,23 @@ class DS18b20(object):#水温探头类
     def __init__(self,DateModel):
         self.DateModel=DateModel
         self.base_dir = '/sys/bus/w1/devices/'
-        self.device_folder = glob.glob(self.base_dir + '28*')[0]
-        self.device_file = self.device_folder + '/w1_slave'
-    def read_rom(self):
-        name_file=self.device_folder+'/name'
-        f = open(name_file,'r')
-        return f.readline()
+
 
     def read_temp_raw(self):
-        f = open(self.device_file, 'r')
-        lines = f.readlines()
-        f.close()
-        return lines
+        try:
+            self.device_folder = glob.glob(self.base_dir + '28*')[0]
+            self.device_file = self.device_folder + '/w1_slave'
+            f = open(self.device_file, 'r')
+            lines = f.readlines()
+            f.close()
+            return lines
+		except Exception,e:
+            print e
+			return False
 
     def start(self):
-        try:
-            lines = self.read_temp_raw()
+		lines = self.read_temp_raw()
+        if lines!=False:
             while lines[0].strip()[-3:] != 'YES':
                 time.sleep(0.2)
                 lines = self.read_temp_raw()
@@ -38,8 +39,7 @@ class DS18b20(object):#水温探头类
                 #temp_f = temp_c * 9.0 / 5.0 + 32.0
                 self.DateModel.watertemp='%.1f'%temp_c
                 #return temp_c
-        except Exception,e:
-            print e
+        else:
             self.DateModel.watertemp=0
 class GuangZhao(object):#光照传感器
     def __init__(self,DateModel):

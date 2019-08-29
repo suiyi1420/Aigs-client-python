@@ -40,7 +40,7 @@ def getFromWeb(self,message):
     if type == 'changeAuto':#手机端发送changeAuto指令，改变自动控制的各个传感器的自动控制状态
         typ=obj['type']
         stat=obj['status']
-        print(changeAuto)
+        #print(changeAuto)
         self.DateModel.changeAuto(typ,stat)
     if type == 'resetCamera':#手机端发送changeAuto指令，改变自动控制的各个传感器的自动控制状态
         os.system("systemctl restart camera")
